@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+
+Если выставить параметр <CopyFile> как "No",
+то <CopyFileWithRandom> и <DestinationCopy> - отключаются.
+
+Значения "Yes" и "NO" регистронезависимые.
+
+        <Kit>
+            <DisplayName>Получение с FTP</DisplayName>
+            <Pattern>X</Pattern>
+            <LocalDir>D:\TEMP\</LocalDir>
+            <ServerDir>/</ServerDir>
+		    <Direction>ServerToLocal</Direction>
+            <DeletingSourceFile>Yes</DeletingSourceFile>
+            <CopyFile>No</CopyFile> 
+            <CopyFileWithRandom>No</CopyFileWithRandom>
+            <DestinationCopy>D:\TEMP\</DestinationCopy>
+        </Kit>
+        <Kit>
+            <DisplayName>Отправка на FTP</DisplayName>
+            <Pattern>X</Pattern>
+            <LocalDir>D:\TEMP\</LocalDir>
+            <ServerDir>/</ServerDir>
+            <Direction>LocalToServer</Direction>
+            <DeletingSourceFile>Yes</DeletingSourceFile>
+            <CopyFile>No</CopyFile>
+            <CopyFileWithRandom>No</CopyFileWithRandom>
+            <DestinationCopy>D:\TEMP\</DestinationCopy>
+        </Kit>
+
+-->
+
+<Param>
+
+    <FTP_Sever>
+        <IP_FTP>10.10.10.10</IP_FTP>
+        <FTPUserName>10</FTPUserName>
+        <FTPUserPassword>10</FTPUserPassword>
+    </FTP_Sever>
+
+    <Organization name = "Treasury" УНП="">
+        <Kit>
+            <DisplayName>Получение c FTP TDMS-файлов</DisplayName>
+            <Pattern>TaxPayer.{0,11}\.rar</Pattern>
+            <LocalDir>Y:\In\</LocalDir>
+            <ServerDir>/TMDTS/In</ServerDir>
+		    <Direction>ServerToLocal</Direction>
+            <DeletingSourceFile>No</DeletingSourceFile>
+            <CopyFile>No</CopyFile>
+            <CopyFileWithRandom></CopyFileWithRandom>
+            <DestinationCopy></DestinationCopy>
+        </Kit>
+    </Organization>
+
+</Param>

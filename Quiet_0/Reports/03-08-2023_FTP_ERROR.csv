@@ -1,0 +1,113 @@
+﻿"Exception";"Date"
+"System.Management.Automation.MethodInvocationException: Exception calling ""SetWorkingDirectory"" with ""1"" argument(s): ""Timed out trying to read data from the socket stream!"" ---> System.TimeoutException: Timed out trying to read data from the socket stream!
+   at FluentFTP.FtpSocketStream.Read(Byte[] buffer, Int32 offset, Int32 count)
+   at FluentFTP.FtpSocketStream.ReadLine(Encoding encoding)
+   at FluentFTP.FtpClient.GetReply()
+   at FluentFTP.FtpClient.Handshake()
+   at FluentFTP.FtpClient.Connect()
+   at FluentFTP.FtpClient.Execute(String command)
+   at FluentFTP.FtpClient.SetWorkingDirectory(String path)
+   at CallSite.Target(Closure , CallSite , Object , Object )
+   --- End of inner exception stack trace ---
+   at System.Management.Automation.ExceptionHandlingOps.CheckActionPreference(FunctionContext funcContext, Exception exception)
+   at System.Management.Automation.Interpreter.ActionCallInstruction`2.Run(InterpretedFrame frame)
+   at System.Management.Automation.Interpreter.EnterTryCatchFinallyInstruction.Run(InterpretedFrame frame)
+   at System.Management.Automation.Interpreter.EnterTryCatchFinallyInstruction.Run(InterpretedFrame frame)";"03-08-2023 07:54:24"
+"System.Management.Automation.MethodInvocationException: Exception calling ""SetWorkingDirectory"" with ""1"" argument(s): ""Timed out trying to read data from the socket stream!"" ---> System.TimeoutException: Timed out trying to read data from the socket stream!
+   at FluentFTP.FtpSocketStream.Read(Byte[] buffer, Int32 offset, Int32 count)
+   at FluentFTP.FtpSocketStream.ReadLine(Encoding encoding)
+   at FluentFTP.FtpClient.GetReply()
+   at FluentFTP.FtpClient.Handshake()
+   at FluentFTP.FtpClient.Connect()
+   at FluentFTP.FtpClient.Execute(String command)
+   at FluentFTP.FtpClient.SetWorkingDirectory(String path)
+   at CallSite.Target(Closure , CallSite , Object , Object )
+   --- End of inner exception stack trace ---
+   at System.Management.Automation.ExceptionHandlingOps.CheckActionPreference(FunctionContext funcContext, Exception exception)
+   at System.Management.Automation.Interpreter.ActionCallInstruction`2.Run(InterpretedFrame frame)
+   at System.Management.Automation.Interpreter.EnterTryCatchFinallyInstruction.Run(InterpretedFrame frame)
+   at System.Management.Automation.Interpreter.EnterTryCatchFinallyInstruction.Run(InterpretedFrame frame)";"03-08-2023 08:30:25"
+"System.Management.Automation.MethodInvocationException: Exception calling ""SetWorkingDirectory"" with ""1"" argument(s): ""Timed out trying to read data from the socket stream!"" ---> System.TimeoutException: Timed out trying to read data from the socket stream!
+   at FluentFTP.FtpSocketStream.Read(Byte[] buffer, Int32 offset, Int32 count)
+   at FluentFTP.FtpSocketStream.ReadLine(Encoding encoding)
+   at FluentFTP.FtpClient.GetReply()
+   at FluentFTP.FtpClient.Handshake()
+   at FluentFTP.FtpClient.Connect()
+   at FluentFTP.FtpClient.Execute(String command)
+   at FluentFTP.FtpClient.SetWorkingDirectory(String path)
+   at CallSite.Target(Closure , CallSite , Object , Object )
+   --- End of inner exception stack trace ---
+   at System.Management.Automation.ExceptionHandlingOps.CheckActionPreference(FunctionContext funcContext, Exception exception)
+   at System.Management.Automation.Interpreter.ActionCallInstruction`2.Run(InterpretedFrame frame)
+   at System.Management.Automation.Interpreter.EnterTryCatchFinallyInstruction.Run(InterpretedFrame frame)
+   at System.Management.Automation.Interpreter.EnterTryCatchFinallyInstruction.Run(InterpretedFrame frame)";"03-08-2023 09:42:24"
+"System.Management.Automation.MethodInvocationException: Exception calling ""SetWorkingDirectory"" with ""1"" argument(s): ""Timed out trying to read data from the socket stream!"" ---> System.TimeoutException: Timed out trying to read data from the socket stream!
+   at FluentFTP.FtpSocketStream.Read(Byte[] buffer, Int32 offset, Int32 count)
+   at FluentFTP.FtpSocketStream.ReadLine(Encoding encoding)
+   at FluentFTP.FtpClient.GetReply()
+   at FluentFTP.FtpClient.Handshake()
+   at FluentFTP.FtpClient.Connect()
+   at FluentFTP.FtpClient.Execute(String command)
+   at FluentFTP.FtpClient.SetWorkingDirectory(String path)
+   at CallSite.Target(Closure , CallSite , Object , Object )
+   --- End of inner exception stack trace ---
+   at System.Management.Automation.ExceptionHandlingOps.CheckActionPreference(FunctionContext funcContext, Exception exception)
+   at System.Management.Automation.Interpreter.ActionCallInstruction`2.Run(InterpretedFrame frame)
+   at System.Management.Automation.Interpreter.EnterTryCatchFinallyInstruction.Run(InterpretedFrame frame)
+   at System.Management.Automation.Interpreter.EnterTryCatchFinallyInstruction.Run(InterpretedFrame frame)";"03-08-2023 10:42:24"
+"System.Management.Automation.MethodInvocationException: Exception calling ""SetWorkingDirectory"" with ""1"" argument(s): ""Timed out trying to read data from the socket stream!"" ---> System.TimeoutException: Timed out trying to read data from the socket stream!
+   at FluentFTP.FtpSocketStream.Read(Byte[] buffer, Int32 offset, Int32 count)
+   at FluentFTP.FtpSocketStream.ReadLine(Encoding encoding)
+   at FluentFTP.FtpClient.GetReply()
+   at FluentFTP.FtpClient.Handshake()
+   at FluentFTP.FtpClient.Connect()
+   at FluentFTP.FtpClient.Execute(String command)
+   at FluentFTP.FtpClient.SetWorkingDirectory(String path)
+   at CallSite.Target(Closure , CallSite , Object , Object )
+   --- End of inner exception stack trace ---
+   at System.Management.Automation.ExceptionHandlingOps.CheckActionPreference(FunctionContext funcContext, Exception exception)
+   at System.Management.Automation.Interpreter.ActionCallInstruction`2.Run(InterpretedFrame frame)
+   at System.Management.Automation.Interpreter.EnterTryCatchFinallyInstruction.Run(InterpretedFrame frame)
+   at System.Management.Automation.Interpreter.EnterTryCatchFinallyInstruction.Run(InterpretedFrame frame)";"03-08-2023 11:48:24"
+"System.Management.Automation.MethodInvocationException: Exception calling ""SetWorkingDirectory"" with ""1"" argument(s): ""Timed out trying to read data from the socket stream!"" ---> System.TimeoutException: Timed out trying to read data from the socket stream!
+   at FluentFTP.FtpSocketStream.Read(Byte[] buffer, Int32 offset, Int32 count)
+   at FluentFTP.FtpSocketStream.ReadLine(Encoding encoding)
+   at FluentFTP.FtpClient.GetReply()
+   at FluentFTP.FtpClient.Handshake()
+   at FluentFTP.FtpClient.Connect()
+   at FluentFTP.FtpClient.Execute(String command)
+   at FluentFTP.FtpClient.SetWorkingDirectory(String path)
+   at CallSite.Target(Closure , CallSite , Object , Object )
+   --- End of inner exception stack trace ---
+   at System.Management.Automation.ExceptionHandlingOps.CheckActionPreference(FunctionContext funcContext, Exception exception)
+   at System.Management.Automation.Interpreter.ActionCallInstruction`2.Run(InterpretedFrame frame)
+   at System.Management.Automation.Interpreter.EnterTryCatchFinallyInstruction.Run(InterpretedFrame frame)
+   at System.Management.Automation.Interpreter.EnterTryCatchFinallyInstruction.Run(InterpretedFrame frame)";"03-08-2023 12:48:24"
+"System.Management.Automation.MethodInvocationException: Exception calling ""SetWorkingDirectory"" with ""1"" argument(s): ""Timed out trying to read data from the socket stream!"" ---> System.TimeoutException: Timed out trying to read data from the socket stream!
+   at FluentFTP.FtpSocketStream.Read(Byte[] buffer, Int32 offset, Int32 count)
+   at FluentFTP.FtpSocketStream.ReadLine(Encoding encoding)
+   at FluentFTP.FtpClient.GetReply()
+   at FluentFTP.FtpClient.Handshake()
+   at FluentFTP.FtpClient.Connect()
+   at FluentFTP.FtpClient.Execute(String command)
+   at FluentFTP.FtpClient.SetWorkingDirectory(String path)
+   at CallSite.Target(Closure , CallSite , Object , Object )
+   --- End of inner exception stack trace ---
+   at System.Management.Automation.ExceptionHandlingOps.CheckActionPreference(FunctionContext funcContext, Exception exception)
+   at System.Management.Automation.Interpreter.ActionCallInstruction`2.Run(InterpretedFrame frame)
+   at System.Management.Automation.Interpreter.EnterTryCatchFinallyInstruction.Run(InterpretedFrame frame)
+   at System.Management.Automation.Interpreter.EnterTryCatchFinallyInstruction.Run(InterpretedFrame frame)";"03-08-2023 14:18:24"
+"System.Management.Automation.MethodInvocationException: Exception calling ""SetWorkingDirectory"" with ""1"" argument(s): ""Timed out trying to read data from the socket stream!"" ---> System.TimeoutException: Timed out trying to read data from the socket stream!
+   at FluentFTP.FtpSocketStream.Read(Byte[] buffer, Int32 offset, Int32 count)
+   at FluentFTP.FtpSocketStream.ReadLine(Encoding encoding)
+   at FluentFTP.FtpClient.GetReply()
+   at FluentFTP.FtpClient.Handshake()
+   at FluentFTP.FtpClient.Connect()
+   at FluentFTP.FtpClient.Execute(String command)
+   at FluentFTP.FtpClient.SetWorkingDirectory(String path)
+   at CallSite.Target(Closure , CallSite , Object , Object )
+   --- End of inner exception stack trace ---
+   at System.Management.Automation.ExceptionHandlingOps.CheckActionPreference(FunctionContext funcContext, Exception exception)
+   at System.Management.Automation.Interpreter.ActionCallInstruction`2.Run(InterpretedFrame frame)
+   at System.Management.Automation.Interpreter.EnterTryCatchFinallyInstruction.Run(InterpretedFrame frame)
+   at System.Management.Automation.Interpreter.EnterTryCatchFinallyInstruction.Run(InterpretedFrame frame)";"03-08-2023 14:54:24"

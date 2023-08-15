@@ -1,0 +1,282 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<!--
+
+Если выставить параметр <CopyFile> как "No",
+то <CopyFileWithRandom> и <DestinationCopy> - отключаются.
+
+Значения "Yes" и "NO" регистронезависимые.
+
+        <Kit>
+            <DisplayName>Получение с FTP</DisplayName>
+            <Pattern>X</Pattern>
+            <LocalDir>D:\TEMP\</LocalDir>
+            <ServerDir>/</ServerDir>
+		    <Direction>ServerToLocal</Direction>
+            <DeletingSourceFile>Yes</DeletingSourceFile>
+            <CopyFile>No</CopyFile> 
+            <CopyFileWithRandom>No</CopyFileWithRandom>
+            <DestinationCopy></DestinationCopy>
+        </Kit>
+        <Kit>
+            <DisplayName>Отправка на FTP</DisplayName>
+            <Pattern>X</Pattern>
+            <LocalDir>D:\TEMP\</LocalDir>
+            <ServerDir>/</ServerDir>
+            <Direction>LocalToServer</Direction>
+            <DeletingSourceFile>Yes</DeletingSourceFile>
+            <CopyFile>No</CopyFile>
+            <CopyFileWithRandom>No</CopyFileWithRandom>
+            <DestinationCopy></DestinationCopy>
+        </Kit>
+-->
+
+
+<Param>
+
+    <FTP_Sever>
+        <IP_FTP>10.10.10.10</IP_FTP>
+        <FTPUserName>10</FTPUserName>
+        <FTPUserPassword>10</FTPUserPassword>
+    </FTP_Sever>
+
+    <Organization name = "ИМНС" УНП="700016074">
+        <Kit>
+            <DisplayName>Домен ГГК Доходы "Центра КТК", входящие: транзит из облКазн для ИМНС, получение с FTP</DisplayName> 
+            <Pattern>E#25000#[A-z0-9]{8}\.XML</Pattern>
+            <LocalDir>K:\E_B_in\</LocalDir>
+            <ServerDir>/IMNS2/OUT</ServerDir>
+			<Direction>ServerToLocal</Direction>
+            <DeletingSourceFile>Yes</DeletingSourceFile>
+            <CopyFile>Yes</CopyFile>
+            <CopyFileWithRandom>No</CopyFileWithRandom>
+            <DestinationCopy>D:\TEMP</DestinationCopy>
+        </Kit>
+        <Kit>
+            <DisplayName>Домен ГГК Доходы "Центра КТК", исходящие: транзит в облКазн из ИМНС, отправка на FTP</DisplayName>
+            <Pattern>E#1#[A-z0-9]{8}\.XML</Pattern>
+            <LocalDir>K:\E_B_out\</LocalDir>
+            <ServerDir>/IMNS2/IN</ServerDir>
+            <Direction>LocalToServer</Direction>
+            <DeletingSourceFile>YES</DeletingSourceFile>
+            <CopyFile>Yes</CopyFile>
+            <CopyFileWithRandom>NO</CopyFileWithRandom>
+            <DestinationCopy>D:\TEMP\</DestinationCopy>
+        </Kit>
+        <Kit>
+            <DisplayName>Отправлен в ИМНС, отправка на FTP</DisplayName>
+            <Pattern>722-700016074-.{36}\.tar</Pattern>
+            <LocalDir>C:\Users\Admin\Downloads\ftp\700016074\</LocalDir>
+            <ServerDir>/IMNS</ServerDir>
+            <Direction>LocalToServer</Direction>
+            <DeletingSourceFile>Yes</DeletingSourceFile>
+            <CopyFile>No</CopyFile>
+            <CopyFileWithRandom>No</CopyFileWithRandom>
+            <DestinationCopy>D:\TEMP\</DestinationCopy>
+        </Kit>
+        <Kit>
+            <DisplayName>Принят из ИМНС, получение с FTP</DisplayName>
+            <Pattern>700016074-722-.{36}\.tar</Pattern>
+            <LocalDir>C:\Users\Admin\Downloads\ftp\700016074\</LocalDir>
+            <ServerDir>/IMNS</ServerDir>
+            <Direction>ServerToLocal</Direction>
+            <DeletingSourceFile>Yes</DeletingSourceFile>
+            <CopyFile>No</CopyFile>
+            <CopyFileWithRandom>No</CopyFileWithRandom>
+            <DestinationCopy></DestinationCopy>
+        </Kit>
+    </Organization> <!-- "ИМНС" -->
+
+    <Organization name = "Treasury" УНП="">
+        <Kit>
+            <DisplayName>Получение выписки текущего дня, получение с FTP</DisplayName>
+            <Pattern>725M[0-9]{4}\.795</Pattern>
+            <LocalDir>K:\G_oper\</LocalDir>
+            <ServerDir>/BANK</ServerDir>
+		    <Direction>ServerToLocal</Direction>
+            <DeletingSourceFile>Yes</DeletingSourceFile>
+            <CopyFile>Yes</CopyFile>
+            <CopyFileWithRandom>Yes</CopyFileWithRandom>
+            <DestinationCopy>K:\G_oper_arc\</DestinationCopy>
+        </Kit>
+        <Kit>
+            <DisplayName>Получение выписки прошлого дня, получение с FTP</DisplayName>
+            <Pattern>725#[0-9]{4}\.795</Pattern>
+            <LocalDir>K:\B_in_out\</LocalDir>
+            <ServerDir>/BANK</ServerDir>
+		    <Direction>ServerToLocal</Direction>
+            <DeletingSourceFile>Yes</DeletingSourceFile>
+            <CopyFile>Yes</CopyFile>
+            <CopyFileWithRandom>Yes</CopyFileWithRandom>
+            <DestinationCopy>K:\G_oper_arc\</DestinationCopy>
+        </Kit>
+        <Kit>
+            <DisplayName>Файловый обмен с облКазн: областной бюджет, получение с FTP</DisplayName>
+            <Pattern>370100.{3}\.722</Pattern>
+            <LocalDir>K:\PTKMAIL\MailIn\</LocalDir>
+            <ServerDir>/</ServerDir>
+            <Direction>ServerToLocal</Direction>
+            <DeletingSourceFile>Yes</DeletingSourceFile>
+            <CopyFile>No</CopyFile>
+            <CopyFileWithRandom>No</CopyFileWithRandom>
+            <DestinationCopy>D:\TEMP\</DestinationCopy>
+        </Kit>
+        <Kit>
+            <DisplayName>Файловый обмен с облКазн: республиканский бюджет, получение с FTP</DisplayName>
+            <Pattern>390000.{3}\.722</Pattern>
+            <LocalDir>K:\PTKMAIL\MailIn\</LocalDir>
+            <ServerDir>/</ServerDir>
+            <Direction>ServerToLocal</Direction>
+            <DeletingSourceFile>Yes</DeletingSourceFile>
+            <CopyFile>No</CopyFile>
+            <CopyFileWithRandom>No</CopyFileWithRandom>
+            <DestinationCopy>D:\TEMP\</DestinationCopy>
+        </Kit>
+        <Kit>
+            <DisplayName>Файловый обмен с облКазн: республиканский бюджет, отправка на FTP</DisplayName>
+            <Pattern>590000722.{13}\.XML</Pattern>
+            <LocalDir>K:\PTKMAIL\MailOut\</LocalDir>
+            <ServerDir>/</ServerDir>
+            <Direction>LocalToServer</Direction>
+            <DeletingSourceFile>Yes</DeletingSourceFile>
+            <CopyFile>No</CopyFile>
+            <CopyFileWithRandom>No</CopyFileWithRandom>
+            <DestinationCopy>D:\TEMP\</DestinationCopy>
+        </Kit>
+        <Kit>
+            <DisplayName>Файловый обмен с облКазн: областной бюджет, отправка на FTP</DisplayName>
+            <Pattern>570100722.{11}\.XML</Pattern>
+            <LocalDir>K:\PTKMAIL\MailOut\</LocalDir>
+            <ServerDir>/</ServerDir>
+            <Direction>LocalToServer</Direction>
+            <DeletingSourceFile>Yes</DeletingSourceFile>
+            <CopyFile>No</CopyFile>
+            <CopyFileWithRandom>No</CopyFileWithRandom>
+            <DestinationCopy>D:\TEMP\</DestinationCopy>
+        </Kit>
+        <Kit>
+            <DisplayName>Файловый обмен с облКазн: республиканский бюджет, отправка на FTP</DisplayName>
+            <Pattern>490000[\w]{3}\.722</Pattern>
+            <LocalDir>K:\PTKMAIL\MailOut\</LocalDir>
+            <ServerDir>/</ServerDir>
+            <Direction>LocalToServer</Direction>
+            <DeletingSourceFile>Yes</DeletingSourceFile>
+            <CopyFile>No</CopyFile>
+            <CopyFileWithRandom>No</CopyFileWithRandom>
+            <DestinationCopy>D:\TEMP\</DestinationCopy>
+        </Kit>
+        <Kit>
+            <DisplayName>Файловый обмен с облКазн: областной бюджет, отправка на FTP</DisplayName>
+            <Pattern>470100[\w]{3}\.722</Pattern>
+            <LocalDir>K:\PTKMAIL\MailOut\</LocalDir>
+            <ServerDir>/</ServerDir>
+            <Direction>LocalToServer</Direction>
+            <DeletingSourceFile>Yes</DeletingSourceFile>
+            <CopyFile>No</CopyFile>
+            <CopyFileWithRandom>No</CopyFileWithRandom>
+            <DestinationCopy>D:\TEMP\</DestinationCopy>
+        </Kit>
+    </Organization> <!-- Treasury -->
+
+    <Organization name = "Лесхоз" УНП="790195063">
+        <Kit>
+            <DisplayName>Внебюджет, получение с FTP</DisplayName>
+            <Pattern>v790195063[0-9]{4}\.700</Pattern>
+            <LocalDir>K:\E_A_out\790195063\</LocalDir>
+            <ServerDir>/790195063/</ServerDir>
+		    <Direction>ServerToLocal</Direction>
+            <DeletingSourceFile>Yes</DeletingSourceFile>
+            <CopyFile>No</CopyFile>
+            <CopyFileWithRandom>No</CopyFileWithRandom>
+            <DestinationCopy>D:\TEMP\</DestinationCopy>
+        </Kit>
+        <Kit>
+            <DisplayName>Внебюджет, отправка на FTP</DisplayName>
+            <Pattern>w700[0-9]{4}\.790195063</Pattern>
+            <LocalDir>K:\E_A_in\</LocalDir>
+            <ServerDir>/790195063/</ServerDir>
+            <Direction>LocalToServer</Direction>
+            <DeletingSourceFile>Yes</DeletingSourceFile>
+            <CopyFile>No</CopyFile>
+            <CopyFileWithRandom>No</CopyFileWithRandom>
+            <DestinationCopy>D:\TEMP\</DestinationCopy>
+        </Kit>
+    </Organization> <!-- Лесхоз -->
+
+    <Organization name = "Водоканал" УНП="790041382">
+        <Kit>
+            <DisplayName>Получение с FTP</DisplayName>
+            <Pattern>[fpqh]722.{4}\.790041382</Pattern>
+            <LocalDir>K:\E_A_in\</LocalDir>
+            <ServerDir>/790041382/</ServerDir>
+		    <Direction>ServerToLocal</Direction>
+            <DeletingSourceFile>Yes</DeletingSourceFile>
+            <CopyFile>No</CopyFile>
+            <CopyFileWithRandom>No</CopyFileWithRandom>
+            <DestinationCopy>D:\TEMP\</DestinationCopy>
+        </Kit>
+        <Kit>
+            <DisplayName>Отправка на FTP</DisplayName>
+            <Pattern>[emld]790041382[0-9]*\.722</Pattern>
+            <LocalDir>K:\E_A_out\790041382\</LocalDir>
+            <ServerDir>/790041382/</ServerDir>
+            <Direction>LocalToServer</Direction>
+            <DeletingSourceFile>Yes</DeletingSourceFile>
+            <CopyFile>No</CopyFile>
+            <CopyFileWithRandom>No</CopyFileWithRandom>
+            <DestinationCopy>D:\TEMP\</DestinationCopy>
+        </Kit>
+    </Organization> <!-- Водоканал -->
+
+     <Organization name = "МОЦИС" УНП="790201651">
+        <Kit>
+            <DisplayName>Получение с FTP</DisplayName>
+            <Pattern>[fpqh]722[0-9]{4}\.790201651</Pattern>
+            <LocalDir>K:\E_A_in\</LocalDir>
+            <ServerDir>/790201651/</ServerDir>
+		    <Direction>ServerToLocal</Direction>
+            <DeletingSourceFile>Yes</DeletingSourceFile>
+            <CopyFile>No</CopyFile>
+            <CopyFileWithRandom>No</CopyFileWithRandom>
+            <DestinationCopy>D:\TEMP\</DestinationCopy>
+        </Kit>
+        <Kit>
+            <DisplayName>Отправка на FTP</DisplayName>
+            <Pattern>[emld]790201651[0-9]{4}\.722</Pattern>
+            <LocalDir>K:\E_A_out\790201651\</LocalDir>
+            <ServerDir>/790201651/</ServerDir>
+            <Direction>LocalToServer</Direction>
+            <DeletingSourceFile>Yes</DeletingSourceFile>
+            <CopyFile>No</CopyFile>
+            <CopyFileWithRandom>No</CopyFileWithRandom>
+            <DestinationCopy>D:\TEMP\</DestinationCopy>
+        </Kit>
+    </Organization> <!-- МОЦИС -->
+
+    <Organization name = "БРСМ" УНП="700743012">
+        <Kit>
+            <DisplayName>Получение с FTP</DisplayName>
+            <Pattern>[fpqh]722.{4}\.700743012</Pattern>
+            <LocalDir>K:\E_A_in</LocalDir>
+            <ServerDir>/700743012/</ServerDir>
+		    <Direction>ServerToLocal</Direction>
+            <DeletingSourceFile>Yes</DeletingSourceFile>
+            <CopyFile>No</CopyFile>
+            <CopyFileWithRandom>No</CopyFileWithRandom>
+            <DestinationCopy>D:\TEMP\</DestinationCopy>
+        </Kit>
+        <Kit>
+            <DisplayName>Отправка на FTP</DisplayName>
+            <Pattern>[emld]700743012[0-9]*\.722</Pattern>
+            <LocalDir>K:\E_A_out\700743012</LocalDir>
+            <ServerDir>/700743012/</ServerDir>
+            <Direction>LocalToServer</Direction>
+            <DeletingSourceFile>Yes</DeletingSourceFile>
+            <CopyFile>No</CopyFile>
+            <CopyFileWithRandom>No</CopyFileWithRandom>
+            <DestinationCopy>D:\TEMP\</DestinationCopy>
+        </Kit>
+    </Organization> <!-- БРСМ -->
+
+</Param>
